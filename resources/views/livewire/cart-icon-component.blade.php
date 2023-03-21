@@ -11,7 +11,7 @@
             @foreach (Cart::instance('cart')->content() as $item)
             <li>
                 <div class="shopping-cart-img">
-                    <a href="{{route ('product.details',['slug'=>$item->model->slug])}}"><img alt="{{($item->model->name)}}" src="{{ asset('assets/imgs/shop/product-')}}{{$item->model-> id}}-1.jpg"
+                    <a href="{{route ('product.details',['slug'=>$item->model->slug])}}"><img src="{{ asset('assets/imgs/products')}}/{{$item ->model-> image}}" alt="{{$item ->model->name }}"
                         alt="{{$item->model ->name }}"></a>
                 </div>
                 <div class="shopping-cart-title">
@@ -29,7 +29,7 @@
             </div>
             <div class="shopping-cart-button">
                 <a href="{{route('shop.cart')}}" class="outline">View cart</a>
-                <a href="checkout.html">Checkout</a>
+                <a href="{{route('shop.checkout')}}">Checkout</a>
             </div>
         </div>
     </div>
