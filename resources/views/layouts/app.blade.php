@@ -73,7 +73,7 @@
             <div class="container">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="{{route('home.index')}}l"><img src="{{ asset('assets/imgs/logo/logo.png') }}" alt="logo"></a>
+                        <a href="{{route('home.index')}}"><img src="{{ asset('assets/imgs/logo/logo.png') }}" alt="logo"></a>
                     </div>
                     <div class="header-right">
                         @livewire('header-search-component')
