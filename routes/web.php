@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
+use App\Http\Livewire\Admin\AdminAddHomeSlideComponent;
 use App\Http\Livewire\Admin\AdminAddProductComponent;
 use App\Http\Livewire\Admin\AdminCategoriesComponent;
 use Illuminate\Support\Facades\Route;
@@ -12,7 +13,9 @@ use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
+use App\Http\Livewire\Admin\AdminEditHomeSlideComponent;
 use App\Http\Livewire\Admin\AdminEditProductComponent;
+use App\Http\Livewire\Admin\AdminHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\DetailsComponent;
@@ -57,6 +60,10 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get("/admin/category/products",AdminProductComponent::class) -> name("admin.products");
     Route::get("/admin/products/add",AdminAddProductComponent::class) -> name("admin.product.add");
     Route::get("/admin/products/edit/{product_id}",AdminEditProductComponent::class) -> name("admin.product.edit");
+    Route::get("/admin/slider",AdminHomeSliderComponent::class) -> name("admin.home.slider");
+    Route::get("/admin/slider/add",AdminAddHomeSlideComponent::class) -> name("admin.home.slide.add");
+    Route::get("/admin/slider/edit/{slide_id}",AdminEditHomeSlideComponent::class) -> name("admin.home.slide.edit");
+
 });
 
 Route::middleware('auth')->group(function () {
